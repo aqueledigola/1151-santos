@@ -14,7 +14,7 @@
             let início = Number(prompt("Número Inicial"))
             let fim = Number(prompt("Número final"))
             let n 
-            if (início - fim) {
+            if (início < fim) {
                 document.writeln(`<h1>Contagem crescente de ${início} a ${fim}</h1>`)
                 n = início 
                 while (n <= fim) {
@@ -28,9 +28,9 @@
                     document.writeln(`${n}<br>`)
                     n--
                 }
-                }
+            }
             document.writeln("ACABOU!!!")
-    }
+        }
     </script>
 </body>
 </html>
