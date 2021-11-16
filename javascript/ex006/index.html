@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Controle Salarial de Funcionários</h1>
+        <button onclick="Calcular()">Controlar Salário</button>
+        <p id="res">O resultado vai aparecer aqui</p>
+        <script>
+
+            let res = document.getElementById("res")
+            
+            function Calcular() {
+
+                let nome = window.prompt("Digite o nome do funcionário")
+                let atual = Number(prompt("Digite o salário atual do funcionário"))
+                let reaj = Number(prompt("Digite a porcentagem do reajuste salarial"))
+
+                let porc = (atual * reaj) / 100 
+                let novo = atual + porc
+
+                res.innerHTML = `O funcionário ${nome} ganhava R$${atual} por mês. Agora, com um reajuste de ${reaj}%, ele passará a ganhar R$${porc} a mais e terá um novo salário de R$${novo}.`
+
+            }
+        </script>
+    </main> 
+</body>
+</html>

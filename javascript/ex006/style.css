@@ -1,0 +1,25 @@
+body {
+    background-image: url(wallpaper.jpg); 
+}
+main {
+    color: white;
+    max-width: auto;
+    
+    margin-left: 300px ;
+    margin-right: 200px;
+    
+    font-size: 30px;  
+}
+button {
+    max-width: auto;
+    margin-left: 300px;
+    font-size: 30px;
+    font-family: cursive, sans-serif;
+    
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+
+    background-color: rgb(228, 187, 8);
+}
+
