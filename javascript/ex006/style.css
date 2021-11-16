@@ -22,4 +22,7 @@ button {
 
     background-color: rgb(228, 187, 8);
 }
+html, body {
+    height: 100%;
+}
 

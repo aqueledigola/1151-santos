@@ -11,7 +11,7 @@
     <main>
         <h1>Calculadora Especial</h1>
         <button onclick="Calcule()">Calcular</button>
-        <p id="res">O resultado vai aparecer aqui</p>
+        <p id="res">*O resultado vai aparecer aqui*</p>
 
         <script>
             let res = document.getElementById("res")
@@ -24,7 +24,7 @@
                 let divi = n1 / n2
                 let pot = n1 ** n2
 
-                res.innerHTML = `-----Os números escolhidos foram: ${n1} e ${n2}-----<br> A soma vale: ${soma}.<br> O produto vale: ${prod}.<br> O quociente vale: ${divi}.<br> E a potência vale: ${pot}.`
+                res.innerHTML = `-----Os números escolhidos foram: <strong>${n1}</strong> e <strong>${n2}</strong>-----<br> A soma vale: <strong>${soma}</strong>.<br> O produto vale: <strong>${prod}</strong>.<br> O quociente vale: <strong>${divi}</strong>.<br> E a potência vale: <strong>${pot}</strong>.`
             }
         </script>
     </main> 

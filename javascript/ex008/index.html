@@ -5,31 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação de Javascript pt 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <h1>Calculadora Especial</h1>
-        
-        <label for="num1">Primeiro número</label>
-        <input type="text" name="num1" id="num1"> <br>
+        <section>
+            <form onsubmit="return Calcule()">
+                <h1>Calculadora Especial</h1>
+                
+                <label for="num1">Primeiro número</label>
+                <input type="text" name="num1" id="num1" size="5">
 
-        <label for="num2">Segundo número</label>
-        <input type="text" name="num2" id="num2">
+                <br><br><label for="num2">Segundo número</label>
+                <input type="text" name="num2" id="num2" size="5">
 
-        <script>
-            let res = document.getElementById("res")
-            function Calcule() {
-                let n1 = Number(prompt("Digite o primeiro número"))
-                let n2 = Number(prompt("Digite o segundo número"))
+                <br><br><input type="submit" value="Calcule" id="button">
+                <p id="res">*O resultado vai aparecer aqui*</p>
+            </form>
+            
+            <script>
+                let res = document.getElementById("res")
+                function Calcule() {
+                    let n1 = Number(document.getElementById("num1").value)
+                    let n2 = Number(document.getElementById("num2").value)
 
-                let soma = n1 + n2
-                let prod = n1 * n2
-                let divi = n1 / n2
-                let pot = n1 ** n2
+                    let soma = n1 + n2
+                    let prod = n1 * n2
+                    let divi = n1 / n2
+                    let pot = n1 ** n2
 
-                res.innerHTML = `-----Os números escolhidos foram: ${n1} e ${n2}-----<br> A soma vale: ${soma}.<br> O produto vale: ${prod}.<br> O quociente vale: ${divi}.<br> E a potência vale: ${pot}.`
-            }
-        </script>
+                    res.innerHTML = `-----Os números escolhidos foram: <strong>${n1}</strong> e <strong>${n2}</strong>-----<br> A soma vale: <strong>${soma}</strong>.<br> O produto vale: <strong>${prod}</strong>.<br> O quociente vale: <strong>${divi}</strong>.<br> E a potência vale: <strong>${pot}</strong>.`
+                    return false
+                }
+            </script>
+        </section>
     </main> 
 </body>
 </html>
