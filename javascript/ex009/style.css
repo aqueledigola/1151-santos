@@ -1,0 +1,37 @@
+body {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(orange, rgb(134, 89, 4));
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    font-size: 20px;
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+}
+#button {
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(199, 2, 2);
+    border-width: 4px;
+    border-color: rgb(102, 1, 1);
+    color: white;
+}
+#Título {
+    font-size: 50px;
+}
+section {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
