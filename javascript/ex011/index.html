@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação 3ª Etapa</title>
+</head>
+<body>
+    <main>
+        <h1>Processamento salarial de funcionários</h1>
+
+        <form action="salvar.php" method="get" onsubmit="return Calcule()">
+        
+        <label for="quantidade">Quantos funcionários serão cadastrados</label>
+        <input type="number" name="quantidade" id="quantidade" min="1"><br><br>
+
+        <input type="submit" value="Calcular" id="button">
+        <p id="res">*O resultado vai aparecer aqui*</p>
+        
+        </form>
+        <script>
+            let res = document.getElementById("res")
+            function Calcule() {
+                let quan = Number(document.getElementById("quantidade").value)
+                let cont = 1
+                let soma = 0
+                let media = 0
+                
+                while (cont <= quan) {
+                    let sal = Number(prompt(`Digite o salário do ${cont}º Funcionário`))
+                    cont++
+                    
+                    soma += sal
+                    media = soma / quan
+                }  
+                res.innerHTML = `No total a empresa vai gastar R$${soma.toFixed(2)} por mês.<br>A média salarial é de R$${media.toFixed(2)}<br>O maior salário pago foi R$`
+                return false  
+            }
+        </script>
+    </main>
+</body>
+</html>
