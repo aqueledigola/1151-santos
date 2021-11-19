@@ -9,16 +9,18 @@
 </head>
 <body>
     <main>
-        <h1>Processamento salarial de funcionários</h1>
+        <section id="título">
+            <h1>Processamento salarial de funcionários</h1>
+        </section>
+        <section id="caixas">
+            <form action="salvar.php" method="get" onsubmit="return Calcule()">
+            
+            <label for="quantidade">Quantos funcionários serão cadastrados</label>
+            <input type="number" name="quantidade" id="quantidade" min="1"><br><br>
 
-        <form action="salvar.php" method="get" onsubmit="return Calcule()">
-        
-        <label for="quantidade">Quantos funcionários serão cadastrados</label>
-        <input type="number" name="quantidade" id="quantidade" min="1"><br><br>
-
-        <input type="submit" value="Calcular" id="button">
-        <p id="res">*O resultado vai aparecer aqui*</p>
-        
+            <input type="submit" value="Calcular" id="button">
+            <p id="res">*O resultado vai aparecer aqui*</p><br><br><br><br><br><br><br><br><br>
+        </section>
         </form>
         <script>
             let res = document.getElementById("res")

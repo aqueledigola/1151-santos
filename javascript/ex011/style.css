@@ -1,0 +1,41 @@
+body {
+    background-image: url(wallpaper.png);
+    
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    background-color: rgba(1, 1, 138, 0.575);
+    margin-top: 40px;
+}
+section#título {
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    font-size: 50px;
+
+    color: white;
+    
+}
+section#caixas {
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    font-size: 30px;
+
+    color: white;
+    
+}
+#button {
+    font-size: 40px;
+    color: white;
+    background-color: rgb(8, 8, 133);
+    
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: rgb(114, 188, 248);
+}
