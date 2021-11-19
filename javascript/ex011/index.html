@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação 3ª Etapa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -33,14 +34,23 @@
                 
                 while (cont <= quan) {
                     let sal = Number(prompt(`Digite o salário do ${cont}º Funcionário`))
-                    cont++
                     
                     soma += sal
                     media = soma / quan
 
-                    if (sal > maior) {
+                    if (cont == 1) {
                         maior = sal
+                        menor = sal
                     }
+                    else {
+                        if (sal > maior) {
+                            maior = sal
+                        }
+                        else if (sal < menor) {
+                            menor = sal
+                        }
+                    }  
+                    cont++
                 }  
                 res.innerHTML = `No total a empresa vai gastar R$${soma.toFixed(2)} por mês.<br>A média salarial é de R$${media.toFixed(2)}<br>O maior salário pago foi R$${maior.toFixed(2)}<br>O menor salário pago foi R$${menor.toFixed(2)}`
                 return false  
