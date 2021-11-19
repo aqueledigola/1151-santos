@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação 3ª Etapa</title>
-</head>
+<section id="Cabeçalho">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avaliação 3ª Etapa</title>
+        <h1>---Financie seu carro---</h1>
+        <link rel="stylesheet" href="style.css">
+    </head>
+</section>
 <body>
     <main>
-        <h1>Financie seu carro</h1>
-        <form action="salvar.php" method="get" onsubmit="return Calcule()"> 
-            <label for="modelo">Escreva o modelo do carro</label>  
-            <input type="text" name="modelo" id="modelo"><br><br>
+        
+        <section id="Caixas">
+            <form action="salvar.php" method="get" onsubmit="return Calcule()"> 
+                <label for="modelo"><strong>Escreva o modelo do carro</strong></label>  
+                <input type="text" name="modelo" id="modelo"><br><br>
 
-            <label for="total">Digite o preço total</label>
-            <input type="number" name="total" id="total" min="0"><br><br>
+                <label for="total"><strong>Digite o preço total</strong></label>
+                <input type="number" name="total" id="total" min="0" size="4"><br><br>
 
-            <label for="parcelas">Digite a quantidade de parcelas</label>
-            <input type="number" name="parcelas" id="parcelas" min="1" max="36"><br><br>
+                <label for="parcelas"><strong>Digite a quantidade de parcelas</strong></label>
+                <input type="number" name="parcelas" id="parcelas" min="1" max="36" size="4"><br><br>
 
-            <input type="submit" value="Calcular" id="button">
-            <p id="res">*O resultado vai aparecer aqui*</p>
-        </form>
+                <input type="submit" value="Calcular" id="button"><br><br>
+                <p id="res"><strong>*O resultado vai aparecer aqui*</strong></p>
+            </form>
+        </section>
         <script>
             let res = document.getElementById("res")
             function Calcule() {
@@ -34,28 +40,28 @@
                     let vpar = juros / par
                     let vtotal = tot + juros
 
-                    res.innerHTML = `O valor é R$${tot.toFixed(2)}, com 80% de juros ficará R$${vtotal.toFixed(2)}, e cada parcela ficará R$${vpar.toFixed(2)}`
+                    res.innerHTML = `O valor é <strong>R$${tot.toFixed(2)}</strong><br>Com 80% de juros ficará <strong>R$${vtotal.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 } 
                 else if (par >= 13) {
                     let juros = (tot * 60) / 100
                     let vpar = juros / par
                     let vtotal = tot + juros
                     
-                    res.innerHTML = `O valor é R$${tot.toFixed(2)}, com 60% de juros ficará R$${vtotal.toFixed(2)}, e cada parcela ficará R$${vpar.toFixed(2)}`
+                    res.innerHTML = `O valor é <strong>R$${tot.toFixed(2)}</strong><br>Com 60% de juros ficará <strong>R$${vtotal.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 } 
                 else if (par >= 5) {
                     let juros = (tot * 25) / 100
                     let vpar = juros / par
                     let vtotal = tot + juros
                     
-                    res.innerHTML = `O valor é R$${tot.toFixed(2)}, com 25% de juros ficará R$${vtotal.toFixed(2)}, e cada parcela ficará R$${vpar.toFixed(2)}`
+                    res.innerHTML = `O valor é <strong>R$${tot.toFixed(2)}</strong><br>Com 25% de juros ficará <strong>R$${vtotal.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 } 
                 else if (par > 1) {
                     let vpar = tot / par
-                    res.innerHTML = `O valor total é R$${tot.toFixed(2)} e cada parcela ficará R$${vpar.toFixed(2)}`
+                    res.innerHTML = `O valor total é <strong>R$${tot.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 }
                 else {
-                    res.innerHTML = `O valor total será de R$${tot.toFixed(2)}`
+                    res.innerHTML = `O valor total será de <strong>R$${tot.toFixed(2)}</strong>`
                 }
                 return false 
             }
