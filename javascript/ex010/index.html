@@ -37,22 +37,22 @@
             
                 if (par >= 24) {
                     let juros = (tot * 80) / 100
-                    let vpar = juros / par
                     let vtotal = tot + juros
+                    let vpar = (tot + juros) / par
 
                     res.innerHTML = `O valor é <strong>R$${tot.toFixed(2)}</strong><br>Com 80% de juros ficará <strong>R$${vtotal.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 } 
                 else if (par >= 13) {
                     let juros = (tot * 60) / 100
-                    let vpar = juros / par
                     let vtotal = tot + juros
+                    let vpar = (tot + juros) / par
                     
                     res.innerHTML = `O valor é <strong>R$${tot.toFixed(2)}</strong><br>Com 60% de juros ficará <strong>R$${vtotal.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 } 
                 else if (par >= 5) {
                     let juros = (tot * 25) / 100
-                    let vpar = juros / par
                     let vtotal = tot + juros
+                    let vpar = (tot + juros) / par
                     
                     res.innerHTML = `O valor é <strong>R$${tot.toFixed(2)}</strong><br>Com 25% de juros ficará <strong>R$${vtotal.toFixed(2)}</strong><br>Cada parcela ficará <strong>R$${vpar.toFixed(2)}</strong>`
                 } 
